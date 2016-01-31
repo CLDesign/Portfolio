@@ -1,0 +1,613 @@
+/********************************************
+GENERAL
+********************************************/
+
+@font-face {
+    font-family: 'bebas-neue-regular';
+    src: url('BebasNeue Regular.otf'); /* IE9 Compat Modes */
+    src: url('BebasNeue Regular.otf') format('opentype'), /* IE6-IE8 */
+    url('BebasNeue Regular.otf') format('opentype'), /* Super Modern Browsers */
+    url('BebasNeue Regular.otf') format('opentype'), /* Pretty Modern Browsers */
+    url('BebasNeue Regular.otf')  format('opentype'), /* Safari, Android, iOS */ 
+
+}
+
+
+
+@font-face {
+font-family: 'bebas-neue-light';
+    src: url('BebasNeue Light.otf'); /* IE9 Compat Modes */
+    src: url('BebasNeue Light.otf') format('opentype'), /* IE6-IE8 */
+    url('BebasNeue Light.otf') format('opentype'), /* Super Modern Browsers */
+    url('BebasNeue Light.otf') format('opentype'), /* Pretty Modern Browsers */
+    url('BebasNeue Light.otf')  format('opentype') /* Safari, Android, iOS */
+    
+    }
+
+    
+ul{
+padding: 0;
+      
+}
+
+
+body{
+      background-image: url(img/Low-Poly-Bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+/********************************************
+START ANIMATION
+********************************************/
+
+#animLogo{
+    max-height: 250px;
+    display: block;
+    fill-opacity:0;
+    margin: 0 auto;
+}
+
+#logoLine3{
+
+    stroke-dasharray:614px;
+    stroke-dashoffset:-614px;
+}
+
+#logoLine4{
+
+    stroke-dasharray:365px;
+    stroke-dashoffset:-365px;
+}
+
+
+/*keyframes */
+
+@keyframes offset{
+    55%{
+        stroke-dashoffset:0;
+        stroke:rgba(255,255,255,1);
+    }
+
+     75%{
+        stroke-dashoffset:0;
+        stroke:rgba(255,255,255,1);
+    }
+    100%{
+       stroke:rgba(0,0,0,0);
+         stroke-dashoffset:0;
+
+    }
+}
+
+@keyframes show{
+    100%{
+       fill-opacity:0.9;
+
+    }
+    60%{
+       fill-opacity:1;
+
+    }
+
+   
+
+   
+
+}
+
+@keyframes titleShow{
+    100%{
+       opacity:1;
+
+    }
+
+    
+   
+
+}
+
+@keyframes disappear{
+    100%{
+       fill-opacity:0;
+
+    }
+}
+
+
+
+#logoLine3{
+    animation:offset 3.5s 1s ease-in-out  forwards;
+
+}
+
+#logoLine4{
+    animation:offset 3.5s 1.5s ease-in-out forwards
+
+}
+
+.st0{
+    animation:show 1s 4.5s cubic-bezier(.65,.2,.35,.8) forwards
+}
+.st1{
+    animation:show 1s 5s cubic-bezier(.65,.2,.35,.8) forwards
+}
+.st2{
+    animation:show 1s 3.5s cubic-bezier(.65,.2,.35,.8) forwards
+}
+.st3{
+    animation:show 1s 4s cubic-bezier(.65,.2,.35,.8) forwards
+}
+
+#introTitle{
+    opacity: 0;
+    text-align: center;
+  font-family:  "bebas-neue-light","Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;  
+     color: white;
+   animation:titleShow 2s 6.5s cubic-bezier(.65,.2,.35,.8) forwards;
+    font-size:2em;
+    letter-spacing: 10px;
+    
+}
+
+#introTitle h1{
+    margin: 10px;
+}
+
+/********************************************
+NAVIGATION
+********************************************/
+#headerLogo{
+    width: 30px;
+    margin:10px 20px 10px 50px;
+    opacity: 0;
+    float: left;
+     
+}
+
+#headerTitle{
+    opacity: 0;
+    left:5%;
+    font-size: 2em;
+    float: left;
+    line-height: 72px;
+    margin: 0;
+    letter-spacing: 8px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type:none;   
+    width: 60%; 
+    margin: 0 auto;
+
+}
+header{
+    position: absolute;
+    width: 100%;
+   
+    top: 0;
+    z-index: 99;
+    color: white;
+    
+     /* background-image: url(img/Low-Poly-Bg.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+header *{
+        
+      transition: all 1s ease;
+      font-family:  "bebas-neue-regular","Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;  
+     
+}
+
+
+.navButtons{
+  
+    width: 33%;
+    text-align: center;
+    display: inline-block;
+    opacity: 0;
+    font-size: 32px;
+    letter-spacing: 8px;
+}
+
+nav{
+    width: 100%;
+  ;
+    position: absolute;
+    top: 0px;
+    opacity: 1;
+    transition: all 1s ease;
+    
+ 
+    
+}
+
+.navButtons{
+    position: relative;
+    
+    -webkit-backface-visibility: hidden;
+}
+
+
+
+.navButtons:hover{
+    color: blue;
+
+    }
+
+
+
+
+
+.delayTransition1{
+    animation:titleShow 1.5s 7s cubic-bezier(.65,.2,.35,.8) forwards;
+    transition: all 1s ease;
+}
+.delayTransition2{
+    animation:titleShow 1.5s 7.25s cubic-bezier(.65,.2,.35,.8) forwards;
+    transition: all 1s 0.02s ease;
+}
+.delayTransition3{
+    animation:titleShow 1.5s 7.5s cubic-bezier(.65,.2,.35,.8) forwards;
+    transition: all 1s 0.04s ease;
+}
+
+
+
+.secondNav{
+    top:20px;
+    opacity: 1;
+    
+    
+}
+
+
+
+ul *{
+     
+      font-family:  "bebas-neue-regular","Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+      
+}
+
+
+.menuSelected{
+    color:#faad51;
+}
+
+
+/********************************************
+SECTION
+********************************************/
+.section{
+  
+    
+}
+
+.secContainer{
+    width: 100%;   
+     display: block;
+}
+
+.workContainer{
+    width: 100%;
+   
+    
+    display: block;
+    margin: 0 auto;
+}
+
+.workContainer h1{
+    margin-left: 2.5%;
+
+}
+
+
+.galleryContainer{
+    
+}
+
+.projectThumb{
+    width: 25%;
+    margin:  0;
+    height: 0;
+    padding-bottom: 25%;
+    display: block;
+    float: left;
+    background-color: red;
+}
+
+.projectThumb img{
+    width: 100%;
+}
+
+
+/********************************************
+SECTION 2 Story
+********************************************/
+#profilePic{
+    width: 10%;
+    height: 0;
+    left: 50%;
+    position: relative;
+    margin-top: 100px;
+    margin-left: -5%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-bottom: 10%;
+
+}
+
+#resumeLink{
+    width: 10%;
+    height: 0;
+    left: 50%;
+    position: relative;
+    margin-top: -100px;
+    margin-left: -5%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-bottom: 10%;
+
+
+}
+
+#profilePic img{
+    width: 100%;
+}
+
+
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 80%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 0;
+  margin-bottom: 2em;
+  font-family:  "bebas-neue-light","Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+    letter-spacing: 5px;
+}
+#cd-timeline::before {
+  /* this is the vertical line */
+    left: 50%;
+  margin-left: -2px;
+  content: '';
+  position: absolute;
+  top: 0;
+  
+  height: 100%;
+  width: 3px;
+  background: #faad51;
+}
+
+.cd-timeline-block{
+    margin: 6em 0;   
+}
+
+.cd-timeline-block:nth-child(1){
+    margin: 4em 0;   
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content{
+
+    float: right;
+    
+    text-align: left;
+}
+
+
+.cd-timeline-block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.cd-timeline-content::before {
+    content: '';
+    position: absolute;
+    right: -10%;
+    height: 0;
+    width: 90%;
+    border: 1px solid #faad51;
+    top: 30px;
+    z-index: -1;
+   
+}
+
+.cd-timeline-block:nth-child(1) .cd-timeline-content::before{
+    width: 120px;
+    right: -60px;
+}
+
+
+.cd-timeline-block:nth-child(2) .cd-timeline-content::before{
+    width: 170px;
+    left: -60px;
+}
+
+.cd-timeline-block:nth-child(3) .cd-timeline-content::before{
+    width: 360px;
+    right: -60px;
+}
+
+
+.cd-timeline-block:nth-child(4) .cd-timeline-content::before{
+    width: 170px;
+    left: -60px;
+}
+
+
+.cd-timeline-content{
+    
+    width:43%;
+    color: white;
+    position: relative;
+    text-align: right;
+}
+
+.cd-timeline-content h2{
+    margin: 0;
+}
+
+.cd-timeline-content p{
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    letter-spacing: 0px;
+    
+}
+
+.cd-timeline-content img{
+padding: 5px;
+height: 50px;    
+}
+
+#kidPic{
+    height: 100px;
+}
+
+.cd-timeline-img{
+    width: 61px;
+    height: 61px;
+    left: 50%;
+    margin-left: -30px;
+    position: absolute;
+    background-color: #221728;
+    border: 1px solid #faad51;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.cd-timeline-img img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin-left: -30px;
+    margin-top:-30px;
+    
+}
+
+.cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 128%;
+    top: 6px;
+    font-size: 16px;
+  
+    text-align: left;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 128%;
+    text-align: right;
+}
+
+.cd-timeline-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+#travelMap{
+    height: 150px;
+}
+
+/********************************************
+SECTION 3 Contact
+********************************************/
+
+
+.contactIcon{
+    width:100px;
+    margin: 5em auto;
+    font-family:  "bebas-neue-light","Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;  
+    color: white;
+    text-align: center;
+
+}
+
+.contactIcon img {
+    width: 100%;
+}
+
+.socialIcon img{
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+.divider{
+    width: 60%;
+    border: 1px #faad51 solid;
+    margin: 0 auto;
+}
+
+
+#iconGroup{
+    margin: 2em auto;
+    width: 60%;
+    display: block;
+
+}
+
+
+.socialIcon{
+    width: 20%;
+    float: left;
+    padding: 2em;
+}
+/********************************************
+RESPONSIVE
+********************************************/
+/*
+@media max-height:1000px; 
+    
+.navButtons{
+   
+    top:810px;
+    
+}
+
+@media max-height:1400px; 
+.navButtons{
+   
+    top:980px;
+    
+}
+
+@media max-height:1700px; 
+.navButtons{
+   
+    top:1040px;
+    
+}*/
