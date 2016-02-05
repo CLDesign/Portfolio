@@ -37,6 +37,7 @@ body{
     background-size: cover;
     
 }
+
 /********************************************
 START ANIMATION
 ********************************************/
@@ -158,7 +159,7 @@ START ANIMATION
 NAVIGATION
 ********************************************/
 #headerLogo{
-    width: 30px;
+    width: 25px;
     margin:10px 20px 10px 50px;
     opacity: 0;
     float: left;
@@ -191,7 +192,7 @@ header{
     z-index: 99;
     color: white;
     
-     /* background-image: url(img/Low-Poly-Bg.jpg);*/
+    background-image: url(img/Low-Poly-Bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -258,10 +259,15 @@ nav{
     transition: all 1s 0.04s ease;
 }
 
+.delayTransition4{
+    animation:titleShow 1.5s 0.25s cubic-bezier(.65,.2,.35,.8) forwards;
+    transition: all 1s 0.04s ease;
+}
+
 
 
 .secondNav{
-    top:20px;
+    transform: translateY(16px);
     opacity: 1;
     
     
@@ -282,7 +288,7 @@ ul *{
 
 
 /********************************************
-SECTION
+SECTION Work
 ********************************************/
 .section{
   
@@ -296,10 +302,10 @@ SECTION
 
 .workContainer{
     width: 100%;
-   
-    
     display: block;
     margin: 0 auto;
+    overflow: hidden;
+    
 }
 
 .workContainer h1{
@@ -320,12 +326,39 @@ SECTION
     display: block;
     float: left;
     background-color: red;
+    opacity: 0;
 }
 
 .projectThumb img{
     width: 100%;
 }
 
+
+
+.projectThumb:nth-child(1){
+    transition-delay: 0s;
+}
+.projectThumb:nth-child(2){
+    transition-delay: 0.1s;
+}
+.projectThumb:nth-child(3){
+    transition-delay: 0.2s;
+}
+.projectThumb:nth-child(4){
+    transition-delay: 0.3s;
+}
+.projectThumb:nth-child(5){
+    transition-delay: 0.4s;
+}
+.projectThumb:nth-child(6){
+    transition-delay: 0.5s;
+}
+.projectThumb:nth-child(7){
+    transition-delay: 0.6s;
+}
+.projectThumb:nth-child(8){
+    transition-delay: 0.7s;
+}
 
 /********************************************
 SECTION 2 Story
@@ -335,11 +368,13 @@ SECTION 2 Story
     height: 0;
     left: 50%;
     position: relative;
-    margin-top: 100px;
+    
     margin-left: -5%;
     border-radius: 50%;
     overflow: hidden;
     padding-bottom: 10%;
+    
+    
 
 }
 
@@ -350,6 +385,7 @@ SECTION 2 Story
     position: relative;
     margin-top: -100px;
     margin-left: -5%;
+    margin-bottom: 50px;
     border-radius: 50%;
     overflow: hidden;
     padding-bottom: 10%;
@@ -395,22 +431,19 @@ SECTION 2 Story
   height: 100%;
   width: 3px;
   background: #faad51;
+   
 }
+
 
 .cd-timeline-block{
-    margin: 6em 0;   
-}
-
-.cd-timeline-block:nth-child(1){
-    margin: 4em 0;   
-}
-
-.cd-timeline-block:nth-child(even) .cd-timeline-content{
-
-    float: right;
+    margin: 6em 0;
+    opacity: 0;
     
-    text-align: left;
 }
+
+
+
+
 
 
 .cd-timeline-block:after {
@@ -432,27 +465,7 @@ SECTION 2 Story
    
 }
 
-.cd-timeline-block:nth-child(1) .cd-timeline-content::before{
-    width: 120px;
-    right: -60px;
-}
 
-
-.cd-timeline-block:nth-child(2) .cd-timeline-content::before{
-    width: 170px;
-    left: -60px;
-}
-
-.cd-timeline-block:nth-child(3) .cd-timeline-content::before{
-    width: 360px;
-    right: -60px;
-}
-
-
-.cd-timeline-block:nth-child(4) .cd-timeline-content::before{
-    width: 170px;
-    left: -60px;
-}
 
 
 .cd-timeline-content{
@@ -489,7 +502,7 @@ height: 50px;
     left: 50%;
     margin-left: -30px;
     position: absolute;
-    background-color: #221728;
+    background-color: #372136;
     border: 1px solid #faad51;
     border-radius: 50%;
     overflow: hidden;
@@ -516,11 +529,7 @@ height: 50px;
     text-align: left;
 }
 
-.cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
-    left: auto;
-    right: 128%;
-    text-align: right;
-}
+
 
 .cd-timeline-content:after {
     content: "";
@@ -540,14 +549,22 @@ height: 50px;
     height: 150px;
 }
 
+.timeLineBlockOnLoad{
+  
+    transform: translateY(-40px);
+}
+
 /********************************************
 SECTION 3 Contact
 ********************************************/
 
-
+#contactGroup{
+    width: 60%;
+    margin: 0 auto;
+}
 .contactIcon{
-    width:100px;
-    margin: 5em auto;
+    width:100%;
+    margin: 3em auto;
     font-family:  "bebas-neue-light","Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;  
     color: white;
     text-align: center;
@@ -555,13 +572,24 @@ SECTION 3 Contact
 }
 
 .contactIcon img {
-    width: 100%;
+    width: 16%;
+    max-width: 100px;
+    min-width: 30px;
 }
 
+.contactIcon p{
+        margin: 0.5em auto;
+        letter-spacing: 5px;
+        font-size: 1.5em;
+    }
+
 .socialIcon img{
-    width: 100px;
+    width: 100%;
+    min-width: 30px;
+    padding: 4%;
     margin: 0 auto;
     display: block;
+    max-width: 100px;
 }
 
 
@@ -582,22 +610,358 @@ SECTION 3 Contact
 
 
 .socialIcon{
-    width: 20%;
+    width: 16%;
     float: left;
-    padding: 2em;
+    margin: 2%;
+}
+
+/*Animation Stuff
+*/
+.animationInit{
+    transform: translateY(100px);
+}
+.transparent{
+    opacity: 0;
+    
+}
+.elementsOnLoad{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 1s 0.04s ease;
 }
 /********************************************
 RESPONSIVE
 ********************************************/
-/*
-@media max-height:1000px; 
+
+
+
+@media screen and (max-width:1000px){ 
+     header{
+        height: 90px;
+    }
+    #headerTitle{
+        text-align: center;
+        width: 90%;
+        position: absolute;
+        font-size: 1.5em;
+        margin: 0 auto;
+        top: -10px;
+    }
+    #headerLogo{
+        width: 15px;
+        margin-left: 30%;
+    } 
     
-.navButtons{
+    nav ul{
+        width: 100%;
+    }   
+    .navButtons{
+
+       top:50px;     
+        color:blue;
+        font-size: 32px;
+        width: 32%;
+
+    }
+      #logoTitle{
+        width:420px;
+        margin: 0 auto;
+    }  
+    
+    .projectThumb{
+        width: 33%;
+        padding-bottom: 33%;
+    }
+    
+    #cd-timeline::before {
+  /* this is the vertical line */
+    left: 14%;
+    margin-left: -2px;
+    content: '';
+    position: absolute;
+    top: 0;
+    }
+    
+    #profilePic{
+    width: 14%;
+    height: 0;
+    left: 14%;
+    position: relative;
+    
+    margin-left: -7%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-bottom: 14%;
+    
+
+    }
+    
+    .cd-container{
+        width:100%;
+    }
+    .cd-timeline-img{
+    width: 50px;
+    height: 50px;
+    left: 14%;
+    margin-left: -25px;
+    position: absolute;
+    background-color: #221728;
+    border: 1px solid #faad51;
+    border-radius: 50%;
+    overflow: hidden;
+
+    }
+    
+    
+    .cd-timeline-img img{
+        margin-left: -24px;
+        margin-top: -24px;
+    }
+    
+    
+ 
+    .cd-timeline-content{
+        width: 77%;
+        text-align: left;
+        left: 25%;
+        margin-top: -15px;
+    }
+    
+    .cd-timeline-content::before {
+    content: '';
+    border: none;
+    }
+    
+    .cd-timeline-content h2{
+        font-size: 2em;
+        padding-top: 6px;
+    }
+    
+      .cd-timeline-content p{
+        font-size: 1em;
+        
+    }
+    
+    .cd-timeline-content img{
+        height: 40px;
+    }
+    
+    #travelMap {
+    height: 200px;
+    }
+    
+    .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:auto;    
+    font-size: 18px;
+    text-align: left;
+    }
+    
+    
+ 
+    
+    #resumeLink {
+    width: 14%;
+    height: 0;
+    left: 14%;
+    position: relative;
+    margin-top: -100px;
+    margin-left: -7%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-bottom: 14%;
+        margin-bottom: 100px;
+    }
    
-    top:810px;
+}
+
+
+
+@media screen and (max-width:520px){ 
+    header{
+        height: 70px;
+    }
+    
+    #logoTitle{
+        width:280px;
+        margin: 0 auto;
+    }  
+    
+    .navButtons{
+        top:50px;     
+        color:red;
+        font-size: 18px;
+        width: 32%;
+    }
+    #headerTitle{
+        text-align: center;
+        width: 90%;
+        position: absolute;
+        font-size: 1.2em;
+        margin: 0 auto;
+        top: -10px;
+        line-height: 70px;
+    }
+    #headerLogo{
+        width: 15px;
+        margin-left: 22%;
+    }
+    #animLogo{
+        max-height: 125px;
+    }
+    #introTitle{
+        font-size: 1em;
+    }
+    
+    .projectThumb{
+        width: 50%;
+        padding-bottom: 50%;
+    }
+    
+    
+    
+    #iconGroup, #contactGroup, .divider{
+        width: 90%;
+    }
+  
+    .contactIcon p{
+        margin: 0.5em auto;
+    }
+    
+    #profilePic{
+    width: 60px;
+    padding-bottom: 60px;
+    left: 14%;
+    margin-left: -30px;    
+
+    }
+    
+    #cd-timeline::before {
+  /* this is the vertical line */
+    left: 14%;
+    
+   
+    }
+    
+    .cd-timeline-block{
+    margin: 4em 0;   
+    }
+    
+    .cd-timeline-img{
+    width: 32px;
+    height: 32px;  
+    margin-left: -15px;
+    } 
+     .cd-timeline-img img{
+        margin-left: -15px;
+        margin-top: -15px;
+    }
+    .cd-timeline-content h2{
+        font-size: 1em;
+        padding-top: 6px;
+    }
+    .cd-timeline-content p{
+        font-size: 0.75em;
+        
+    }
+    .cd-timeline-content img{
+        height: 30px;
+    }
+     #travelMap {
+    height: 125px;
+    }
+     .cd-timeline-content .cd-date {
+       
+    font-size: 12px;
+  
+    
+    }
+      #resumeLink {
+        width: 60px;
+        padding-bottom: 60px;
+        left: 14%;
+        margin-left: -30px;
+        margin-top: -90px;
+
+    }
     
 }
 
+@media screen and (max-width:1000px) and (orientation:landscape){ 
+    #logoTitle{
+        width:280px;
+    }
+    
+     .navButtons{
+        top:30px;     
+        color:yellow;
+        font-size: 18px;
+        width: 32%;
+    }
+    
+    
+    header{
+        height: 50px;
+    } 
+    #headerTitle{
+        text-align: center;
+        width: 90%;
+        position: absolute;
+        font-size: 0.8em;
+        margin: 0 auto;
+        line-height: 50px;
+    }
+    #headerLogo{
+        width: 10px;
+        margin: 5px 0 0 22%;
+        
+    }
+    
+    .contactIcon{
+        margin: 2em auto;
+    }
+}
+
+@media screen and (min-width:1000px){ 
+    .cd-timeline-block:nth-child(even) .cd-timeline-content{
+
+    float: right;
+    
+    text-align: left;
+    }
+    
+    .cd-timeline-block:nth-child(1) .cd-timeline-content::before{
+    width: 120px;
+    right: -60px;
+    }
+
+
+    .cd-timeline-block:nth-child(2) .cd-timeline-content::before{
+        width: 170px;
+        left: -60px;
+    }
+
+    .cd-timeline-block:nth-child(3) .cd-timeline-content::before{
+        width: 360px;
+        right: -60px;
+    }
+
+
+    .cd-timeline-block:nth-child(4) .cd-timeline-content::before{
+        width: 170px;
+        left: -60px;
+    }
+    
+    .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 128%;
+    text-align: right;
+    }
+}
+
+/*
 @media max-height:1400px; 
 .navButtons{
    
